@@ -22,7 +22,7 @@ steps: # the various steps the pipeline will execute (in order)
     goals: 'package'
 - task: CopyFiles@2 # copy files to azure staging directory task
   inputs:
-    Contents: '**/.war'
+    Contents: '**/*.war'
     TargetFolder: '$(build.artifactstagingdirectory)'
 - task: PublishBuildArtifacts@1 # publish artifacts to azure task
   inputs:
